@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Product Card/Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shoestyle.css">
+    <link rel="stylesheet" href="style6.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  </head>
+  <body>
+    
+    <nav> 
+<!--menu-bar----------------------------------------->
+<div class="navigation">
+   <!--logo------------>
+   <div id="titl">
+     <strong>EXCLUSIVE FOOTWEAR</strong>
+   </div>
+   <!--menu-icon------------->
+   <div class="toggle"></div>
+   <!--menu----------------->
+   <ul class="menu">
+       <li><a href="Main Page.html">Home</a></li>
+       <li  class="shop"><a href="#ok" >New Arrival</a></li>
+       <li><a href="#bye">Men</a>
+           <!--lable---->
+           <span class="sale-lable">Sale</span>
+       </li>
+       <li><a href="#tata">Women</a></li>
+       
+   </ul>
+   </div>
+</nav>
+    
+    <div class = "card-wrapper">
+      <div class = "card">
+        <!-- card left -->
+        <div class = "product-imgs">
+          <div class = "img-display">
+            <div class = "img-showcase">
+              <img src = "shoes_images/shoe_1.jpg" alt = "shoe image">
+              <img src = "shoes_images/shoe_2.jpg" alt = "shoe image">
+              <img src = "shoes_images/shoe_3.jpg" alt = "shoe image">
+              <img src = "shoes_images/shoe_4.jpg" alt = "shoe image">
+            </div>
+          </div>
+          <div class = "img-select">
+            <div class = "img-item">
+              <a href = "#" data-id = "1">
+                <img src = "shoes_images/shoe_1.jpg" alt = "shoe image">
+              </a>
+            </div>
+            <div class = "img-item">
+              <a href = "#" data-id = "2">
+                <img src = "shoes_images/shoe_2.jpg" alt = "shoe image">
+              </a>
+            </div>
+            <div class = "img-item">
+              <a href = "#" data-id = "3">
+                <img src = "shoes_images/shoe_3.jpg" alt = "shoe image">
+              </a>
+            </div>
+            <div class = "img-item">
+              <a href = "#" data-id = "4">
+                <img src = "shoes_images/shoe_4.jpg" alt = "shoe image">
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- card right -->
+        <div class = "product-content">
+          <h2 class = "product-title">Footwear</h2>
+          <a href = "#" class = "product-link">visit Shopify Store</a>
+          <div class = "product-rating">
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star"></i>
+            <i class = "fas fa-star-half-alt"></i>
+            <span>4.7(21)</span>
+          </div>
+
+          <div class = "product-price">
+            <p class = "last-price">Old Price: <span>Rs.2500</span></p>
+            <p class = "new-price">New Price: <span>Rs.425 (83%)</span></p>
+          </div>
+
+          <div class = "product-detail">
+            <h2>about this item: </h2>
+            <p>Sole: Rubber / Synthetic
+              Closure: Lace-Up
+              Shoe Width: Regular
+              Outer Material: Mesh
+              Closure Type: Lace-Up
+              Toe Style: Round Toe
+              Warranty Type: Manufacturer & Seller
+              Warranty Description: 60 days
+              </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, perferendis eius. Dignissimos, labore suscipit. Unde.</p>
+            <ul>
+              <li>Color: <span>Black</span></li>
+              <li>Available: <span>in stock</span></li>
+              <li>Category: <span>Shoes</span></li>
+              <li>Shipping Area: <span>All over the world</span></li>
+              <li>Shipping Fee: <span>Free</span></li>
+            </ul>
+          </div>
+
+          <div class = "purchase-info">
+            <input type = "number" min = "0" value = "1">
+            <button type = "button" class = "btn" style="background-color: rgb(0, 132, 255);">
+              Add to Cart <i class = "fas fa-shopping-cart"></i>
+            </button>
+            <a href="pay2.html"><button type = "button" class = "btn">Buy now</button></a>
+          </div>
+
+          <div class = "social-links">
+            <p>Share At: </p>
+            <a href = "#">
+              <i class = "fab fa-facebook-f"></i>
+            </a>
+            <a href = "#">
+              <i class = "fab fa-twitter"></i>
+            </a>
+            <a href = "#">
+              <i class = "fab fa-instagram"></i>
+            </a>
+            <a href = "#">
+              <i class = "fab fa-whatsapp"></i>
+            </a>
+            <a href = "#">
+              <i class = "fab fa-pinterest"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="cmnt">
+    <h1 style="color: #0b9d8a;">WRITE YOUR REVIEW</h1>
+    <form  method="post">
+      <input name="comments" id="comments" style="width:60%;height:140px;padding:2%;font-size:1.2em;border:12px inset #0b9d8a;" placeholder="Write your review here">
+    </input><br>
+      <input type="submit" value="Submit">
+      </form>
+  </div>
+  <section class="services">
+    <!--services-box---------->
+    <div class="services-box">
+        <i class="fas fa-shipping-fast"></i>
+        <span>Free Shipping</span>
+        <p>Free Shipping for all <strong>Ind</strong> order</p>
+    </div>
+    <!--services-box---------->
+    <div class="services-box">
+        <i class="fas fa-headphones-alt"></i>
+        <span>Support 24/7</span>
+        <p>We support 24h a day</p>
+    </div>
+    <!--services-box---------->
+    <div class="services-box">
+        <i class="fas fa-sync"></i>
+        <span>100% Money Back</span>
+        <p>You have 10 days to Return</p>
+    </div>
+    
+</section>
+<!--footer---------------------------->
+<footer>
+
+    <!--subcribe---------------->
+    <div class="subscribe">
+        <form>
+        <input type="email" placeholder="Example@gmail.com" required/>
+        <input type="submit" value="Subscribe">
+        </form>
+    </div>
+</footer>
+
+    
+    <script src="script.js"></script>
+  </body>
+</html>
