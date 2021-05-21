@@ -1,0 +1,1059 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="IE-edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, intial-scale=1.0" name="viewport">
+<title>Shopping Website</title>
+<!--fav-icon---------------->
+<link rel="shortcut icon" href="images/fav-icon.png"/>
+<link rel="stylesheet" href="style6.css">
+<link rel="stylesheet" href="hover.css">
+<script src="javas.js"></script>
+	
+    
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/c8e4d183c2.js"></script>
+    <!--light-slider-files-->
+<link rel="stylesheet" href="other/lightslider.css">
+<!--js-link--------------------->
+<script src="other/JQuery.js"></script>
+<script src="other/lightslider.js"></script>
+<!--using JQuery--------------->
+  </script>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/c8e4d183c2.js"></script>
+    <!--light-slider-files-->
+<link rel="stylesheet" href="other/lightslider.css">
+<!--js-link--------------------->
+<script src="other/Jquery.js"></script>
+<script src="other/lightslider.js"></script>
+<!--using JQuery--------------->
+
+<script>
+    /*-----For Search Bar-----------------------------*/
+    var b=0;
+    function increement(){
+        b++;
+        document.getElementById("done").innerHTML=b;
+    }
+    $(document).on('click','.search',function(){
+        $('.search-bar').addClass('search-bar-active')
+    });
+ 
+    $(document).on('click','.search-cancel',function(){
+        $('.search-bar').removeClass('search-bar-active')
+    });
+    /*---For Login and Sign-up----------------------------*/
+    $(document).on('click','.user,.already-account',function(){
+        $('.form').addClass('login-active').removeClass('sign-up-active')
+    });
+ 
+    $(document).on('click','.sign-up-btn',function(){
+        $('.form').addClass('sign-up-active').removeClass('login-active')
+    });
+ 
+    $(document).on('click','.form-cancel',function(){
+        $('.form').removeClass('login-active').removeClass('sign-up-active')
+    });
+     /*----Full Page Slider---------------*/
+ 
+     $(document).ready(function() {
+    $('#adaptive').lightSlider({
+        adaptiveHeight:true,
+        auto:true,
+        item:1,
+        slideMargin:0,
+        loop:true
+    });
+  });
+          /*--For-Product-SLider----------------*/
+          $(document).ready(function() {
+    $('#autoWidth').lightSlider({
+        autoWidth:true,
+        loop:true,
+        onSliderLoad: function() {
+            $('#autoWidth').removeClass('cS-hidden');
+        } 
+    });  
+  });
+  /*--For-make-Menu-responsive------------*/
+  $(document).ready(function(){
+		$('.toggle').click(function(){
+			$('.toggle').toggleClass('active')
+			$('.navigation').toggleClass('active')
+		})
+	});
+
+</script> 
+     
+	
+</head>
+<body>
+    <nav> 
+        <!--social-links-and-phone-number----------------->
+ <div class="social-call">
+     <!--social-links--->
+     <div class="social">
+         <a href="#"><i class="fab fa-facebook-f"></i></a>
+         <a href="#"><i class="fab fa-twitter"></i></a>
+         <a href="#"><i class="fab fa-youtube"></i></a>
+         <a href="#"><i class="fab fa-instagram"></i></a>
+     </div>
+     <!--phone-number------>
+     <div class="phone">
+         <span>Call: +91857085675</span>
+     </div>
+ </div>
+ <!--menu-bar----------------------------------------->
+ <div class="navigation">
+     <!--logo------------>
+     <a href="#" class="logo"><img src="images/logo.png" ></a>
+     <!--menu-icon------------->
+     <div class="toggle"></div>
+     <!--menu----------------->
+     <ul class="menu">
+         <li><a href="#top">Home</a></li>
+         <li  class="shop"><a href="#ok" >New Arrival</a></li>
+         <li><a href="#bye">Men</a>
+             <!--lable---->
+             <span class="sale-lable">Sale</span>
+         </li>
+         <li><a href="#tata">Women</a></li>
+         <li><a href="shoe.html">Exclusive Footwear</a></li>
+         
+     </ul>
+     <!--right-menu----------->
+     <div class="right-menu">
+         <a href="javascript:void(0);" class="search">
+             <i class="fas fa-search"></i>
+         </a>
+         <a href="javascript:void(0);" class="user">
+             <i class="far fa-user"></i>
+         </a>
+         <a href="cart.html">
+             <i class="fas fa-shopping-cart" >
+                 <span id="done" class="num-cart-product">0</span>
+             </i>
+         </a>
+     </div>
+     </div>
+ </nav>
+ <!--search-bar----------------------------------->
+ <div class="search-bar">
+    
+    <!--search-input------->
+    <div class="search-input">
+    <input type="text" placeholder="Search For Product" name="search" />
+    <a href="#bye"><button class="search-button">Search</button></a>
+    <!--cancel-btn--->
+    <a href="javascript:void(0);" class="search-cancel">
+        <i class="fas fa-times"></i>
+    </a>
+
+</div>
+</div>
+<!---login-and-sign-up--------------------------------->
+<div class="form">
+    <!--login---------->
+    <div class="login-form">
+        <!--cancel-btn---------------->
+        <a href="javascript:void(0);" class="form-cancel">
+            <i class="fas fa-times"></i>
+        </a>
+        <strong>Log In</strong>
+        <!--inputs-->
+        <form name="okform" onsubmit="return oklogin()">
+            <input type="email" name="email" placeholder="Example@gmail.com" required/>
+            <input type="password" name="password" placeholder="Password" required/>
+            <input type="submit"  value= "Log In">
+        </form>
+        <script>
+            function oklogin(){
+
+                var email=document.okform.email.value;  
+                var password=document.okform.password.value;
+
+                if(email.length>=1 || email.match(/([@])/) || password.length>=1){
+                alert("Welcome")
+                return false;
+                }
+            }
+        </script>
+        <!--forget-and-sign-up-btn-->
+        <div class="form-btns">
+            <a href="#" class="forget">Forget Your Password?</a>
+            <a href="javascript:void(0);" class="sign-up-btn">Create Account</a>
+        </div>
+    </div>
+        <!--Sign-up---------->
+        <div class="sign-up-form">
+            <!--cancel-btn---------------->
+        <a href="javascript:void(0);" class="form-cancel">
+            <i class="fas fa-times"></i>
+        </a>
+            <strong>Sign Up</strong>
+            <!--inputs-->
+            <form>
+                <input type="text" name="fullname" placeholder="Full Name" required/>
+                <input type="email" name="email" placeholder="Example@gmail.com" required/>
+                <input type="password" name="password" placeholder="Password" required/>
+                <input type="submit" value="Sign Up"/>
+            </form>
+            <!--forget-and-sign-up-btn-->
+            <div class="form-btns">
+                <a href="javascript:void(0);" class="already-account">
+                    Already Have Account?</a>
+
+            </div>
+        </div>
+</div>
+<!-----------full-slider----------------------------->
+<ul id="adaptive" class="">
+        
+    <!--box-1--------------------------->
+    <li class="item-a">
+        <!---box------------------->
+<div class="full-slider-box f-slide-1">
+    
+    <div class="f-slider-text-container">
+    <div class="f-slider-text">
+        <span>Limited Offer</span>
+        <strong>30% Off<br/> With <font>Promo Code On T-Shirts</font></strong>
+        <a href="#" class="f-slider-btn">Shop Now</a>
+    </div>
+    </div>
+
+</div>
+</li>
+ <!--box-2--------------------------->
+    <li class="item-b">
+        <!---box------------------->
+<div class="full-slider-box f-slide-2">
+    
+    <div class="f-slider-text-container">
+    <div class="f-slider-text">
+        <span>Limited Offer</span>
+        <strong>50% Off<br/> With <font>Promo Code On ladies Wear</font></strong>
+        <a href="#" class="f-slider-btn">Shop Now</a>
+        
+    </div>
+    </div>
+
+</div>
+</li>
+     <!--box-3--------------------------->
+     <li class="item-c">
+        <!---box------------------->
+<div class="full-slider-box f-slide-3">
+    
+    <div class="f-slider-text-container">
+    <div class="f-slider-text">
+        <span>Limited Offer</span>
+        <strong>30% Off<br/> With <font>Promo Code</font></strong>
+        <a href="#" class="f-slider-btn">Shop Now</a>
+    </div>
+    </div>
+
+</div>
+</li>
+ 
+</ul>
+<!--product-categories-slider---------------------->
+<ul id="autoWidth" class="container" class="cs-hidden">
+    <!--box-1--------------------->
+    <li class="item">
+        <div class="feature-box">
+            <a href="#">
+                <img src="images/feature_1.jpg">
+            </a>
+        </div>
+        <span>T-Shirts</span>
+    </li>
+    <!--box-2--------------------->
+    <li class="item">
+        <div class="feature-box">
+            <a href="#">
+                <img src="images/feature_2.jpg">
+            </a>
+        </div>
+        <span>Men T-Shirts</span>
+    </li>
+    <!--box-3--------------------->
+    <li class="item">
+        <div class="feature-box">
+            <a href="#">
+                <img src="images/feature_3.jpg">
+            </a>
+        </div>
+        <span>Kids T-Shirts</span>
+    </li>
+    <!--box-4--------------------->
+    <li class="item">
+        <div class="feature-box">
+            <a href="#">
+                <img src="images/feature_4.jpg">
+            </a>
+        </div>
+        <span>Pillow</span>
+    </li>
+    <!--box-5--------------------->
+    <li class="item">
+        <div class="feature-box">
+            <a href="#">
+                <img src="images/feature_5.jpg">
+            </a>
+        </div>
+        <span>Phone Cover</span>
+    </li>
+    <!--box-6--------------------->
+     </div><li class="item">
+        <div class="feature-box"> 
+            <a href="#">
+                <img src="images/feature_6.jpg">
+            </a>
+        </div><div id="ok"></div>
+        <span>Shopping Bags</span>
+    </li></div>
+    </ul>
+
+   <br><br><br> 
+
+
+  <!--NEW ARRIVAL-------------------------------->
+  <section class="new-arrival">
+            
+    <!--heading-------->
+    <div class="arrival-heading" id="kids">
+        <strong>New Arrival</strong>
+        <p>We Provide You New Fasion Design Clothes</p>
+    </div>
+      <!--products----------------------->
+      <div class="product-container">
+          
+        <!--product-box-1---------->
+          <div class="product-box">
+              <!--product-img------------>
+              <div class="product-img">
+                  <!--add-cart---->
+                  <a href="pay2.html" class="add-cart">
+                      <i class="fas fa-shopping-cart"></i>
+                    </a>
+                  <!--img------>
+
+
+                  <div class="image">
+                    <img class="image__img" src="images/p-1.png" alt="Bricks">
+                    <div class="image__overlay image__overlay--primary">
+                        <div class="image__title">DETALS</div>
+                        <p class="image__description">
+                            <ol type="1">
+                                <li>Color:Golden Yellow</li>
+                                <li>Size :S,M,L</li>
+                                <li>Quality:cotton</li>
+                            </ol>
+                            <a href="#" class="mycart">Full Details</a>
+                            <div class="mycart" onclick="increement()">Add To Cart</div>
+                        </p>
+                    </div>
+                </div>
+              
+            <script>
+                let btnAdd =document.querySelector('#mycart');
+
+             btnAdd.addEventListener('click', () =>{
+             done.value = parseInt(done.value) + 1;
+             })
+            </script>
+
+            </div>
+              <!--product-details-------->
+              <div class="product-details">
+                  <a href="#" class="p-name">Pranera</a>
+                  <span class="p-price">Rs. 1000.00</span>
+              </div>
+          </div>
+            <!--product-box-2---------->
+            <div class="product-box">
+                <!--product-img------------>
+                <div class="product-img">
+                    <!--add-cart---->
+                  <a href="pay2.html" class="add-cart"><i class="fas fa-shopping-cart"></i></a>
+                  <!--img------>
+
+
+
+                  <div class="image">
+                    <img class="image__img" src="images/p-2.png" alt="Bricks">
+                    <div class="image__overlay image__overlay--primary">
+                        <div class="image__title">DETAILS</div>
+                        <p class="image__description">
+                            <ol type="1">
+                                <li>Color:Sky Blue</li>
+                                <li>Size :M,L</li>
+                                <li>Quality:cotton</li>
+                            </ol>
+                            <a href="#" class="mycart">Full Details</a>
+                            <div class="mycart" onclick="increement()">Add To Cart</div>
+                        </p>
+                    </div>
+                </div>
+              
+            <script>
+                let btnAdd =document.querySelector('#mycart');
+
+             btnAdd.addEventListener('click', () =>{
+             done.value = parseInt(done.value) + 1;
+             })
+            </script>
+                
+                
+                </div>
+                <!--product-details-------->
+                <div class="product-details">
+                    <a href="#" class="p-name">VeBNor</a>
+                    <span class="p-price">Rs.849.00</span>
+                </div>
+            </div>
+          <!--product-box-3---------->
+          <div class="product-box">
+            <!--product-img------------>
+            <div class="product-img">
+                <!--add-cart---->
+                <a href="pay2.html" class="add-cart"><i class="fas fa-shopping-cart"></i></a>
+                <!--img------>
+
+
+
+                <div class="image">
+                    <img class="image__img" src="images/p-3.png" alt="Bricks">
+                    <div class="image__overlay image__overlay--primary">
+                        <div class="image__title">DETAILS</div>
+                        <p class="image__description">
+                            <ol type="1">
+                                <li>Color:Black</li>
+                                <li>Size :S,M</li>
+                                <li>Sports Wear</li>
+                            </ol>
+                            <a href="#" class="mycart">Full Details</a>
+                            <div class="mycart" onclick="increement()">Add To Cart</div>
+                        </p>
+                    </div>
+                </div>
+              
+            <script>
+                let btnAdd =document.querySelector('#mycart');
+
+             btnAdd.addEventListener('click', () =>{
+             done.value = parseInt(done.value) + 1;
+             })
+            </script>
+            
+            </div>
+            <!--product-details-------->
+            <div class="product-details">
+                <a href="cart.html" class="p-name">Uzee</a>
+                <span class="p-price">Rs.600.00</span>
+            </div>
+        </div>
+          <!--product-box-4---------->
+          <div class="product-box">
+            <!--product-img------------>
+            <div class="product-img">
+                <!--add-cart---->
+                <a href="pay2.html" class="add-cart"><i class="fas fa-shopping-cart"></i></a>
+                <!--img------>
+
+
+
+                <div class="image">
+                    <img class="image__img" src="images/p-4.png" alt="Bricks">
+                    <div class="image__overlay image__overlay--primary">
+                        <div class="image__title">DETAILS</div>
+                        <p class="image__description">
+                            <ol type="1">
+                                <li>Color:Rose Red</li>
+                                <li>Quality:Rubber</li>
+                                <li>Flexible</li>
+                            </ol>
+                            <a href="#" class="mycart">Full Details</a>
+                            <div class="mycart" onclick="increement()">Add To Cart</div>
+                        </p>
+                    </div>
+                </div>
+              
+            <script>
+                let btnAdd =document.querySelector('#mycart');
+
+             btnAdd.addEventListener('click', () =>{
+             done.value = parseInt(done.value) + 1;
+             })
+            </script>
+            
+            </div>
+            <!--product-details-------->
+            <div class="product-details">
+                <a href="#" class="p-name">Apple iPhone 10 Back Cover </a>
+                <span class="p-price">Rs.350</span>
+            </div>
+        </div>
+          <!--product-box-5---------->
+          <div class="product-box">
+            <!--product-img------------>
+            <div class="product-img">
+                <!--add-cart---->
+                <a href="pay2.html" class="add-cart"><i class="fas fa-shopping-cart"></i></a>
+                <!--img------>
+
+
+
+                <div class="image">
+                    <img class="image__img" src="images/p-5.png" alt="Bricks">
+                    <div class="image__overlay image__overlay--primary">
+                        <div class="image__title">DETAILS</div>
+                        <p class="image__description">
+                            <ol type="1">
+                                <li>Color:Navy Blue</li>
+                                <li>Size :M,L,XL</li>
+                                <li>Quality:cotton</li>
+                            </ol>
+                            <a href="#" class="mycart">Full Details</a>
+                            <div class="mycart" onclick="increement()">Add To Cart</div>
+                        </p>
+                    </div>
+                </div>
+              
+            <script>
+                let btnAdd =document.querySelector('#mycart');
+
+             btnAdd.addEventListener('click', () =>{
+             done.value = parseInt(done.value) + 1;
+             })
+            </script>
+            
+            </div>
+            <!--product-details-------->
+            <div class="product-details">
+                <a href="#" class="p-name">WildCraft</a>
+                <span class="p-price">Rs.1200.00</span>
+            </div>
+        </div>
+          <!--product-box-6---------->
+          <div class="product-box">
+            <!--product-img------------>
+            <div class="product-img">
+                <!--add-cart---->
+                <a href="pay2.html" class="add-cart"><i class="fas fa-shopping-cart"></i></a>
+                <!--img------>
+
+
+
+                <div class="image">
+                    <img class="image__img" src="images/p-6.png" alt="Bricks">
+                    <div class="image__overlay image__overlay--primary">
+                        <div class="image__title">DETAILS</div>
+                        <p class="image__description">
+                            <ol type="1">
+                                <li>Color:</li>
+                                <li>Quality:Denim</li>
+                                <li>Jacket</li>
+                            </ol>
+                            <a href="#" class="mycart">Full Details</a>
+                            <div class="mycart" onclick="increement()">Add To Cart</div>
+                        </p>
+                    </div>
+                </div>
+              
+            <script>
+                let btnAdd =document.querySelector('#mycart');
+
+             btnAdd.addEventListener('click', () =>{
+             done.value = parseInt(done.value) + 1;
+             })
+            </script>
+
+
+            </div>
+            <!--product-details-------->
+            <div class="product-details">
+                <a href="#" class="p-name">Dennis Lingo</a>
+                <span class="p-price">Rs.1500</span>
+            </div>
+        </div>
+          <!--product-box-7---------->
+          <div class="product-box">
+            <!--product-img------------>
+            <div class="product-img">
+                <!--add-cart---->
+                <a href="pay2.html" class="add-cart"><i class="fas fa-shopping-cart"></i></a>
+                <!--img------>
+
+
+
+                <div class="image">
+                    <img class="image__img" src="images/p-7.png" alt="Bricks">
+                    <div class="image__overlay image__overlay--primary">
+                        <div class="image__title">DETAILS</div>
+                        <p class="image__description">
+                            <ol type="1">
+                                <li>Color:Candy Apple (red)</li>
+                                <li>Size :S,M,L</li>
+                                <li>Quality:Double sided</li>
+                            </ol>
+                            <a href="#" class="mycart">Full Details</a>
+                            <div class="mycart" onclick="increement()">Add To Cart</div>
+                        </p>
+                    </div>
+                </div>
+              
+            <script>
+                let btnAdd =document.querySelector('#mycart');
+
+             btnAdd.addEventListener('click', () =>{
+             done.value = parseInt(done.value) + 1;
+             })
+            </script>
+            
+            </div>
+            <!--product-details-------->
+            <div class="product-details">
+                <a href="#" class="p-name">DUCATI</a>
+                <span class="p-price">Rs.2000.00</span>
+            </div>
+        </div>
+          <!--product-box-8---------->
+          <div class="product-box">
+            <!--product-img------------>
+            <div class="product-img">
+                <!--add-cart---->
+                <a href="pay2.html" class="add-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <!--img------>
+
+
+
+                <div class="image">
+                    <img class="image__img" src="images/p-8.png" alt="Bricks">
+                    <div class="image__overlay image__overlay--primary">
+                        <div class="image__title">DETAILS</div>
+                        <p class="image__description">
+                            <ol type="1">
+                                <li>Color:antiquewhite</li>
+                                <li>Size :M</li>
+                                <li>Quality:cotton</li>
+                            </ol>
+                            <a href="#" class="mycart">Full Details</a>
+                            <div class="mycart" onclick="increement()">Add To Cart</div>
+                        </p>
+                    </div>
+                </div>
+              
+            <script>
+                let btnAdd =document.querySelector('#mycart');
+
+             btnAdd.addEventListener('click', () =>{
+             done.value = parseInt(done.value) + 1;
+             })
+            </script>
+            
+            
+            
+            </div>
+            <!--product-details-------->
+            <div class="product-details">
+                <a href="#" class="p-name">Insua</a>
+                <span class="p-price">Rs4500.00</span>
+            </div>
+        </div>
+      </div>
+  </section>
+  <!---sale------------------------------------>
+  <section class="sale">
+    <!--sale-box-1-------------------->
+    <div class="sale-box sale-1">
+        <img src="images/sale-1.jpg">
+        
+        <a href="#">
+        <div class="sale-text">
+          <strong>Bag with rose pattern</strong>
+          <span>Sale off 25%</span>
+        </div></a>
+    
+      </div>
+       <!--sale-box-2-------------------->
+    <div class="sale-box sale-1">
+      <img src="images/sale-2.jpg">
+      
+      <a href="#"><div class="sale-text">
+        <strong>Hello Summer</strong>
+        <span>Sale off 20%</span>
+      </div></a>
+  
+    </div>
+     <!--sale-box-3-------------------->
+     <div id="bye"></div><div class="sale-box sale-1">
+      <img src="images/sale-3.jpg">
+      
+      <a href="#">
+      <div class="sale-text">
+        <strong>Let's Party Hard Pillow</strong>
+        <span>Sale off 25%</span>
+      </div></a>
+  
+    </div>
+ 
+</section>
+
+<div class="arrival-heading" id="kids">
+    <strong>MEN's WEAR</strong>
+</div>
+    
+<!--Feature-items-------------------------------->
+<section class="feature-item">
+            
+    <!--heading-------->
+    <div class="feature-heading">
+    <strong>Featured Items &nbsp;</strong>
+    <p>We Provide You New Fasion Design Clothes</p>
+        </div>
+      <!--products----------------------->
+      <div class="product-container ">
+          
+        <!--product-box-1---------->
+          <div class="product-box" id="Mensection">
+              <!--product-img------------>
+              <div class="product-img">
+                  <!--add-cart---->
+                  <a href="pay2.html" class="add-cart"><i class="fas fa-shopping-cart"></i></a>
+                  <!--img------>
+
+
+                  
+                  <div class="image">
+                    <img class="image__img" src="images/Mtshirt.jpg" alt="Bricks">
+                    <div class="image__overlay image__overlay--primary">
+                        <div class="image__title">DETAILS</div>
+                        <p class="image__description">
+                            <ol type="1">
+                                <li>Color:Printed Black</li>
+                                <li>Size :S,M</li>
+                                <li>Quality:Ring-Spun Cotton</li>
+                            </ol>
+                            <a href="#" class="mycart">Full Details</a>
+                            <a href="cart.html" class="mycart">Add To Cart</a>
+                        </p>
+                    </div>
+                </div>
+              
+            
+            
+            </div>
+              <!--product-details-------->
+              <div class="product-details">
+                  <a href="#" class="p-name">T-Shirt</a>
+                  <span class="p-price">Rs.500</span>
+              </div>
+          </div>
+            <!--product-box-2---------->
+            <div class="product-box">
+                <!--product-img------------>
+                <div class="product-img">
+                    <!--add-cart---->
+                  <a href="pay2.html" class="add-cart"><i class="fas fa-shopping-cart"></i></a>
+                  <!--img------>
+
+
+                    <div class="image">
+                    <img class="image__img" src="images/Mshirt.webp" alt="Bricks">
+                    <div class="image__overlay image__overlay--primary">
+                        <div class="image__title">DETAILS</div>
+                        <p class="image__description">
+                            <ol type="1">
+                                <li>Color:Printed White</li>
+                                <li>Size :M,L</li>
+                                <li>Quality:100% cotton</li>
+                            </ol>   
+                            <a href="#" class="mycart">Full Details</a>
+                            <a href="cart.html" class="mycart">Add To Cart</a>
+                         </p>                        
+                    </div>
+                </div>  
+                
+                
+                
+                </div>
+                <!--product-details-------->
+                <div class="product-details">
+                    <a href="#" class="p-name">Formal Shirt</a>
+                    <span class="p-price">Rs.1200.00</span>
+                </div>
+            </div>
+          <!--product-box-3---------->
+          <div class="product-box">
+            <!--product-img------------>
+            <div class="product-img">
+                <!--add-cart---->
+                <a href="pay2.html" class="add-cart"><i class="fas fa-shopping-cart"></i></a>
+                <!--img------>
+
+
+                <div class="image">
+                    <img class="image__img" src="images/Msports.webp" alt="Bricks">
+                    <div class="image__overlay image__overlay--primary">
+                        <div class="image__title">DETAILS</div>
+                        <p class="image__description">
+                            <ol type="1">
+                                <li>Color:Grey(Red Stripes)</li>
+                                <li>Size :S,M,L,XL</li>
+                                <li>Quality:Triblends</li>
+                            </ol>
+                            <a href="#" class="mycart">Full Details</a>
+                            <a href="cart.html" class="mycart">Add To Cart</a>
+                        </p>
+                    </div>
+                </div>  
+            
+            
+            
+            </div>
+            <!--product-details-------->
+            <div class="product-details">
+                <a href="#" class="p-name">Sports Wear</a>
+                <span class="p-price">Rs800.00</span>
+            </div>
+        </div>
+         <!--product-box-4---------->
+         <div class="product-box">
+            <!--product-img------------>
+            <div class="product-img">
+                <!--add-cart---->
+                <a href="pay2.html" class="add-cart"><i class="fas fa-shopping-cart"></i></a>
+                <!--img------>
+
+
+                <div class="image">
+                    <img class="image__img" src="images/Mshoes.webp" alt="Bricks">
+                    <div class="image__overlay image__overlay--primary">
+                        <div class="image__title">DETAILS</div>
+                        <p class="image__description">
+                            <ol type="1">
+                                <li>Color:Red(Black Spots)</li>
+                                <li>Size :6-7-8-9</li>
+                                <li>Quality:Sport Shoes</li>
+                            </ol>
+                            <a href="#" class="mycart">Full Details</a>
+                            <a href="cart.html" class="mycart">Add To Cart</a>
+                        </p>
+                    </div>
+                </div>  
+            
+            
+            
+            </div>
+            <!--product-details-------->
+            <div id="tata"></div> <div class="product-details">
+                <a href="#" class="p-name">Shoes</a>
+                <span class="p-price">Rs2500.00</span>
+            </div>
+        </div>
+    </div>
+    
+    
+    <br><br>
+    
+    
+    <div class="arrival-heading" id="kids">
+        <strong> WOMENs WEAR </strong>
+        <p>We Provide You New Fasion Design Clothes</p>
+    </div>
+    
+
+
+    <div class="feature-heading">
+
+        <div class="product-container" id="Womensection">
+          
+            <!--product-box-1---------->
+              <div class="product-box">
+                  <!--product-img------------>
+                  <div class="product-img">
+                      <!--add-cart---->
+                      <a href="pay2.html" class="add-cart"><i class="fas fa-shopping-cart"></i></a>
+                      <!--img------>
+
+
+                      <div class="image">
+                        <img class="image__img" src="images/Ftshirt.jpg" alt="Bricks">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">DETAILS</div>
+                            <p class="image__description">
+                                <ol type="1">
+                                    <li>Color:Printed White</li>
+                                    <li>Size :S,M</li>
+                                    <li>Quality:cotton</li>
+                                </ol>
+                                <a href="#" class="mycart">Full Details</a>
+                            <a href="cart.html" class="mycart">Add To Cart</a>
+                            </p>
+                        </div>
+                    </div>                    
+                
+                
+                </div>
+                  <!--product-details-------->
+                  <div class="product-details">
+                      <a href="#" class="p-name"> Women T-Shirt</a>
+                      <span class="p-price">Rs.700.00</span>
+                  </div>
+              </div>
+                <!--product-box-2---------->
+                <div class="product-box">
+                    <!--product-img------------>
+                    <div class="product-img">
+                        <!--add-cart---->
+                      <a href="pay2.html" class="add-cart"><i class="fas fa-shopping-cart"></i></a>
+                      <!--img------>
+
+
+                      <div class="image">
+                        <img class="image__img" src="images/Fkurti.jpeg" alt="Bricks">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">DETAILS</div>
+                            <p class="image__description">
+                                <ol type="1">
+                                    <li>Color:black(desginer)</li>
+                                    <li>Size :M,L</li>
+                                    <li>Quality:100% cotton</li>
+                                </ol>
+                                <a href="#" class="mycart">Full Details</a>
+                            <a href="cart.html" class="mycart">Add To Cart</a>
+                            </p>
+                        </div>
+                    </div>  
+                    
+                    
+                    
+                    </div>
+                    <!--product-details-------->
+                    <div class="product-details">
+                        <a href="#" class="p-name">Kurti</a>
+                        <span class="p-price">Rs.1200.00</span>
+                    </div>
+                </div>
+              <!--product-box-3---------->
+              <div class="product-box">
+                <!--product-img------------>
+                <div class="product-img">
+                    <!--add-cart---->
+                    <a href="pay2.html" class="add-cart"><i class="fas fa-shopping-cart"></i></a>
+                    <!--img------>
+
+
+                    <div class="image">
+                        <img class="image__img" src="images/Flehnga.jpg" alt="Bricks">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title">DETAILS</div>
+                            <p class="image__description">
+                                <ol type="1">
+                                    <li>Color:Pink</li>
+                                    <li>Size :M</li>
+                                    <li>Quality:Georgette </li>
+                                </ol>
+                                <a href="#" class="mycart">Full Details</a>
+                            <a href="cart.html" class="mycart">Add To Cart</a>
+                            </p>
+                        </div>
+                    </div>  
+                
+                
+                
+                </div>
+                <!--product-details-------->
+                <div class="product-details">
+                    <a href="#" class="p-name">Lehenga</a>
+                    <span class="p-price">Rs3500.00</span>
+                </div>
+            </div>
+             <!--product-box-4---------->
+             <div class="product-box">
+                <!--product-img------------>
+                <div class="product-img">
+                    <!--add-cart---->
+                    <a href="pay2.html" class="add-cart"><i class="fas fa-shopping-cart"></i></a>
+                    <!--img------>
+
+
+                    <div class="image">
+                        <img class="image__img" src="images/Fjeans.jpg" alt="Bricks">
+                        <div class="image__overlay image__overlay--primary">
+                            <div class="image__title"> DETAILS</div>
+                            <p class="image__description">
+                                <ol type="1">
+                                    <li>Color:Blue</li>
+                                    <li>Size :S,M,L</li>
+                                    <li>Quality:Denim</li>
+                                </ol>
+                                <a href="#" class="mycart">Full Details</a>
+                            <a href="cart.html" class="mycart">Add To Cart</a>
+                            </p>
+                        </div>
+                    </div>  
+                
+                
+                </div>
+                <!--product-details-------->
+                <div class="product-details">
+                    <a href="#" class="p-name">Jeans</a>
+                    <span class="p-price">Rs1300.00</span>
+                </div>
+            </div>
+              
+          
+            </div>
+            </section>
+    <!--banner-->
+    <div class="banner-box f-slide-3">
+        
+        <div class="banner-text-container">
+        <div class="banner-text">
+            <span>Limited Offer</span>
+            <strong>30% Off<br/> With <font>Promo Code</font></strong>
+            <a href="#" class="banner-btn">Shop Now</a>
+        </div>
+        </div>
+    
+    </div> 
+    <!--services------------------------->
+    <section class="services">
+        <!--services-box---------->
+        <div class="services-box">
+            <i class="fas fa-shipping-fast"></i>
+            <span>Free Shipping</span>
+            <p>Free Shipping for all <strong>Ind</strong> order</p>
+        </div>
+        <!--services-box---------->
+        <div class="services-box">
+            <i class="fas fa-headphones-alt"></i>
+            <span>Support 24/7</span>
+            <p>We support 24h a day</p>
+        </div>
+        <!--services-box---------->
+        <div class="services-box">
+            <i class="fas fa-sync"></i>
+            <span>100% Money Back</span>
+            <p>You have 10 days to Return</p>
+        </div>
+        
+    </section>
+    <!--footer---------------------------->
+    <footer>
+    
+        <!--subcribe---------------->
+        <div class="subscribe">
+            <form>
+            <input type="email" placeholder="Example@gmail.com" required/>
+            <input type="submit" value="Subscribe">
+            </form>
+        </div>
+    </footer>
+
+</body>
+</html>
